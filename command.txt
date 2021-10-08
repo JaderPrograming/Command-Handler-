@@ -1,0 +1,16 @@
+const { Message, Client } = require("discord.js");
+
+module.exports = {
+    name: "",///nombre del comando
+    aliases: ['p'],///alias del comando (opcional)
+    /**
+     *
+     * @param {Client} client
+     * @param {Message} message
+     * @param {String[]} args
+     */
+    run: async (client, message, args) => {
+        
+        message.channel.send(`${client.ws.ping} ws ping`);///accion que realiza el bot al un usuario ejecutar el comando
+    },
+};
